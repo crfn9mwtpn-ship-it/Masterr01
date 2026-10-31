@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: whatsapp-ia-bot
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: starter
+    region: oregon
+    healthCheckPath: /health
+    autoDeploy: true
+    disk:
+      name: bot-session
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: SESSION_DIR
+        value: /data/session
+      - key: PORT
+        value: 3000
+      - key: SUPABASE_URL
+        value: https://y5bsz07hp6db54mu7oic.helloreaddy.com/
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: WEBHOOK_URL
+        value: https://y5bsz07hp6db54mu7oic.helloreaddy.com/functions/v1/wa-webhook
+      - key: BOT_TOKEN
+        sync: false

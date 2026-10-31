@@ -1,0 +1,21 @@
+{
+  "name": "whatsapp-ia-bot",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Servico de conexao WhatsApp (Baileys) + ponte com o backend de IA",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
+    "@whiskeysockets/baileys": "^6.7.8",
+    "express": "^4.21.2",
+    "pino": "^9.5.0",
+    "qrcode": "^1.5.4"
+  }
+}

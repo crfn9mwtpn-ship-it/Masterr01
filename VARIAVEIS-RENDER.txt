@@ -1,0 +1,33 @@
+==============================================
+ VARIAVEIS DO RENDER - copie e cole no painel
+==============================================
+
+Se essas variaveis nao estiverem configuradas, o deploy falha com:
+"[bot] SUPABASE_URL e SUPABASE_SERVICE_ROLE_KEY sao obrigatorios."
+
+--- JA PREENCHIDAS (so conferir) ---
+
+SUPABASE_URL
+https://y5bsz07hp6db54mu7oic.helloreaddy.com/
+
+WEBHOOK_URL
+https://y5bsz07hp6db54mu7oic.helloreaddy.com/functions/v1/wa-webhook
+
+SESSION_DIR
+/data/session
+
+PORT
+3000
+
+--- VOCE PRECISA PREENCHER ---
+
+SUPABASE_SERVICE_ROLE_KEY  (OBRIGATORIA)
+(pegue no painel do Backend, na area de chaves/API. NUNCA use no frontend)
+
+BOT_TOKEN  (OPCIONAL)
+(so preencha se voce cadastrou o segredo BOT_TOKEN no Backend)
+
+----------------------------------------------
+Lembre de criar um DISCO de 1 GB montado em /data.
+Sem disco a sessao se perde e o QR volta a cada reinicio.
+----------------------------------------------

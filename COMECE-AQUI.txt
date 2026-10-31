@@ -1,0 +1,31 @@
+COMECE AQUI - 4 PASSOS
+======================
+
+1) DESCOMPACTE este zip.
+   Suba os arquivos na RAIZ de um repositorio novo no GitHub.
+   O package.json, Dockerfile e render.yaml precisam ficar na raiz,
+   sem pasta no meio.
+
+2) No Render: New +  ->  Blueprint  ->  escolha o repositorio.
+   O arquivo render.yaml cria o servico e o disco de 1 GB sozinho.
+
+3) Abra o servico no Render -> aba Environment -> Add Environment Variable
+      Nome:  SUPABASE_SERVICE_ROLE_KEY
+      Valor: a chave de servico do seu Backend
+   Depois clique em Manual Deploy -> Deploy latest commit.
+
+4) Abra o painel do projeto -> aba Conexao -> escaneie o QR com o celular
+   (WhatsApp -> Aparelhos conectados -> Conectar um aparelho).
+
+DICA: abrindo o proprio link do Render no navegador (https://SEU-SERVICO.onrender.com)
+voce ve o QR e um diagnostico com check/cruz do que esta faltando.
+
+----------------------------------------------
+Ja vem pronto, nao precisa mexer:
+  SUPABASE_URL = https://y5bsz07hp6db54mu7oic.helloreaddy.com/
+  WEBHOOK_URL  = https://y5bsz07hp6db54mu7oic.helloreaddy.com/functions/v1/wa-webhook
+
+Deu erro? Abra https://SEU-SERVICO.onrender.com/ no navegador.
+A pagina mostra o QR e o diagnostico; em /health a resposta mostra 'missing'
+com o nome exato da variavel que falta.
+----------------------------------------------
